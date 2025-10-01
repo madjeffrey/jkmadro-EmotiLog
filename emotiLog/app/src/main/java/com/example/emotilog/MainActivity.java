@@ -1,5 +1,6 @@
 package com.example.emotilog;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,6 +17,8 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.emotilog.databinding.ActivityMainBinding;
+
+import java.time.LocalDateTime;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,76 +43,16 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
 
-        // set on click listener for all buttons
-        Button btnHappy = findViewById(R.id.btnHappy);
-        Button btnAngry = findViewById(R.id.btnAngry);
-        Button btnSad = findViewById(R.id.btnSad);
-        Button btnAnxious = findViewById(R.id.btnWorried);
-        Button btnTired = findViewById(R.id.btnTired);
-        Button btnLove = findViewById(R.id.btnLove);
-        Button btnNeutral = findViewById(R.id.btnNeutral);
-        Button btnExcited = findViewById(R.id.btnExcited);
-
-        btnHappy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                EmotiLog.getInstance().logEmotion("Happy");
-                Log.d("DEBUG", "emotilog:" + EmotiLog.getInstance().getEmotions() );
-            }
-        });
-        btnSad.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                EmotiLog.getInstance().logEmotion("Sad");
-
-            }
-        });
-        btnAnxious.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d("DEBUG", "emotilog:" + EmotiLog.getInstance().getEmotions() );
-                EmotiLog.getInstance().logEmotion("Anxious");
-                Log.d("DEBUG", "emotilog:" + EmotiLog.getInstance().getEmotions() );
 
 
-            }
-        });
-        btnAngry.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                EmotiLog.getInstance().logEmotion("Angry");
-
-            }
-        });
-        btnExcited.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                EmotiLog.getInstance().logEmotion("Excited");
-
-            }
-        });
-        btnTired.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                EmotiLog.getInstance().logEmotion("Tired");
-
-            }
-        });
-        btnNeutral.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                EmotiLog.getInstance().logEmotion("Neutral");
-
-            }
-        });
-        btnLove.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                EmotiLog.getInstance().logEmotion("Love");
-            }
-        });
-
-
+        //// can comment out when doing video
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            EmotiLog.getInstance().logEmotionDate("Happy", LocalDateTime.of(2025, 9, 30, 14, 30, 15));
+            EmotiLog.getInstance().logEmotionDate("Sad", LocalDateTime.of(2025, 9, 30, 15, 42, 11));
+            EmotiLog.getInstance().logEmotionDate("Angry", LocalDateTime.of(2025, 9, 30, 16, 28, 35));
+            EmotiLog.getInstance().logEmotionDate("Happy", LocalDateTime.of(2025, 9, 30, 11, 12, 52));
+            EmotiLog.getInstance().logEmotionDate("Happy", LocalDateTime.of(2025, 9, 30, 20, 1, 11));
+        }
 
     }
 }

@@ -16,6 +16,13 @@ public class Emotion {
         }
     }
 
+    public Emotion(String emotion, LocalDateTime date){
+        this.emotion = emotion;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            this.time = date;
+        }
+    }
+
     public LocalDateTime getTime() {
         return time;
     }

@@ -4,6 +4,7 @@ import android.os.Build;
 
 import java.lang.reflect.Array;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -25,6 +26,9 @@ public class EmotiLog {
 
     public void logEmotion(String emotion){
         this.emotions.add(new Emotion(emotion));
+    }
+    public void logEmotionDate(String emotion, LocalDateTime date){
+        this.emotions.add(new Emotion(emotion, date));
     }
 
     public ArrayList<Emotion> getEmotions(){

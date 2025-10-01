@@ -1,6 +1,7 @@
 package com.example.emotilog;
 
 import android.content.Context;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.annotation.Nullable;
 
 import com.example.emotilog.ui.notifications.NotificationsFragment;
 
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class EmoteArrayAdapter extends ArrayAdapter<Emotion> {
@@ -38,7 +40,9 @@ public class EmoteArrayAdapter extends ArrayAdapter<Emotion> {
         TextView timeText = view.findViewById(R.id.dateText);
 
         emotionText.setText(emotion.getEmotion());
-        timeText.setText(emotion.getTime().toString());
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            timeText.setText(emotion.getTime().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")).toString());
+        }
 
         return view;
     }

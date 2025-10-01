@@ -20,6 +20,7 @@ import com.example.emotilog.databinding.FragmentNotificationsBinding;
 public class NotificationsFragment extends Fragment {
 
     private ListView emoteList;
+    private TextView emptyTextView;
     private EmoteArrayAdapter emoteAdapter;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -27,9 +28,20 @@ public class NotificationsFragment extends Fragment {
         View view = LayoutInflater.from(getContext()).inflate(R.layout.fragment_notifications, null);
 
         emoteList = view.findViewById(R.id.emotionList);
+        emptyTextView = view.findViewById(R.id.emptyTextView);
+
+        if (EmotiLog.getInstance().getEmotions().isEmpty()) {
+            emoteList.setVisibility(View.GONE);
+            emptyTextView.setVisibility(View.VISIBLE);
+        } else {
+            emoteList.setVisibility(View.VISIBLE);
+            emptyTextView.setVisibility(View.GONE);
+        }
+
+
         emoteAdapter = new EmoteArrayAdapter(getContext(), EmotiLog.getInstance().getEmotions());
         emoteList.setAdapter(emoteAdapter);
-        Log.d("DEBUG", "emotilog:" + EmotiLog.getInstance().getEmotions() );
+        emoteAdapter.notifyDataSetChanged();
 
         return view;
     }
@@ -38,5 +50,7 @@ public class NotificationsFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+        emoteList = null;
+        emoteAdapter = null;
     }
 }
