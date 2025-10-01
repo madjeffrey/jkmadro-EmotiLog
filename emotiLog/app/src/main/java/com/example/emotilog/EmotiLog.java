@@ -2,10 +2,12 @@ package com.example.emotilog;
 
 import android.os.Build;
 
+import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 
 public class EmotiLog {
     private static EmotiLog instance;

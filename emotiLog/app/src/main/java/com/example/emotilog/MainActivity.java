@@ -2,7 +2,12 @@ package com.example.emotilog;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ListView;
 
+import com.example.emotilog.ui.notifications.NotificationsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -39,8 +44,6 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navView, navController);
 
 
-
-        //// can comment out when doing video
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             EmotiLog.getInstance().logEmotionDate("Happy", LocalDateTime.of(2025, 9, 30, 14, 30, 15));
             EmotiLog.getInstance().logEmotionDate("Sad", LocalDateTime.of(2025, 9, 30, 15, 42, 11));
