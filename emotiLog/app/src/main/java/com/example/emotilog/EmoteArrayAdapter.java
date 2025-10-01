@@ -11,8 +11,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.example.emotilog.ui.notifications.NotificationsFragment;
-
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
