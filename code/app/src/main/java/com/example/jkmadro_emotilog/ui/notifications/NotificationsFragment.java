@@ -15,7 +15,7 @@ import com.example.jkmadro_emotilog.EmotiLog;
 import com.example.jkmadro_emotilog.R;
 
 public class NotificationsFragment extends Fragment {
-
+    // fragment to display all logged emotions for the entire app
     private ListView emoteList;
     private TextView emptyTextView;
     private EmoteArrayAdapter emoteAdapter;

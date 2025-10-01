@@ -17,6 +17,8 @@ import java.util.ArrayList;
 public class EmoteArrayAdapter extends ArrayAdapter<Emotion> {
     private Context context;
     private ArrayList<Emotion> emotions;
+    // array adapter to update the Notifications fragment to show all logged emotions and time
+
     public EmoteArrayAdapter(Context context, ArrayList<Emotion> emotions) {
         super(context, 0, emotions);
         this.context = context;

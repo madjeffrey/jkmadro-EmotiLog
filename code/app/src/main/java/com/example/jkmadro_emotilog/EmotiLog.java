@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class EmotiLog {
     private static EmotiLog instance;
     private ArrayList<Emotion> emotions;
-
+    // class that store and queries the emotions logged
     private EmotiLog(){
         this.emotions = new ArrayList<Emotion>();
     }

@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class DashboardFragment extends Fragment {
     private FragmentDashboardBinding binding;
-
+    // Fragment to display the summary and frequency of each emotion for any given day or the total summary
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentDashboardBinding.inflate(inflater, container, false);

@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
 
-
+        // testing to create my own data on a different date
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             EmotiLog.getInstance().logEmotionDate("Happy", LocalDateTime.of(2025, 9, 30, 14, 30, 15));
             EmotiLog.getInstance().logEmotionDate("Sad", LocalDateTime.of(2025, 9, 30, 15, 42, 11));

@@ -14,7 +14,7 @@ import com.example.jkmadro_emotilog.EmotiLog;
 import com.example.jkmadro_emotilog.R;
 
 public class HomeFragment extends Fragment {
-
+    // fragment to get log emotions through the interface and buttons
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -34,7 +34,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 EmotiLog.getInstance().logEmotion("Happy");
-                Log.d("DEBUG", "emotilog:" + EmotiLog.getInstance().getEmotions() );
+                Log.d("DEBUG", "emotilog:" + EmotiLog.getInstance().getEmotions());
             }
         });
         btnSad.setOnClickListener(new View.OnClickListener() {
@@ -47,9 +47,9 @@ public class HomeFragment extends Fragment {
         btnAnxious.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("DEBUG", "emotilog:" + EmotiLog.getInstance().getEmotions() );
+                Log.d("DEBUG", "emotilog:" + EmotiLog.getInstance().getEmotions());
                 EmotiLog.getInstance().logEmotion("Anxious");
-                Log.d("DEBUG", "emotilog:" + EmotiLog.getInstance().getEmotions() );
+                Log.d("DEBUG", "emotilog:" + EmotiLog.getInstance().getEmotions());
 
 
             }
@@ -91,10 +91,5 @@ public class HomeFragment extends Fragment {
 
 
         return view;
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
     }
 }
