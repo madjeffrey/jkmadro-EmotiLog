@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/feeling_prompt"
+            android:textColor="#333333"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Emoji Buttons Grid -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:alignmentMode="alignBounds"
+            android:columnCount="2"
+            android:rowCount="4">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHappy"
+                android:layout_width="0dp"
+                android:layout_height="142dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:background="@drawable/emoji_button_bg"
+                android:textSize="15sp"
+                android:text="Happy"
+                app:icon="@drawable/happy"
+                app:iconSize="75dp"
+                app:iconGravity="start"
+                app:iconTint="@null"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSad"
+                android:layout_width="0dp"
+                android:layout_height="142dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:background="@drawable/emoji_button_bg"
+                android:textSize="15sp"
+                android:text="Sad"
+                app:icon="@drawable/sad"
+                app:iconSize="75dp"
+                app:iconGravity="start"
+                app:iconTint="@null"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAngry"
+                android:layout_width="0dp"
+                android:layout_height="142dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:background="@drawable/emoji_button_bg"
+                android:textSize="15sp"
+                android:text="Angry"
+                app:icon="@drawable/angry"
+                app:iconSize="75dp"
+                app:iconGravity="start"
+                app:iconTint="@null"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnExcited"
+                android:layout_width="0dp"
+                android:layout_height="142dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:background="@drawable/emoji_button_bg"
+                android:textSize="15sp"
+                android:text="Excited"
+                app:icon="@drawable/excited"
+                app:iconSize="75dp"
+                app:iconGravity="start"
+                app:iconTint="@null"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTired"
+                android:layout_width="0dp"
+                android:layout_height="142dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:background="@drawable/emoji_button_bg"
+                android:textSize="15sp"
+                android:text="Tired"
+                app:icon="@drawable/tired"
+                app:iconSize="75dp"
+                app:iconGravity="start"
+                app:iconTint="@null"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLove"
+                android:layout_width="0dp"
+                android:layout_height="142dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:background="@drawable/emoji_button_bg"
+                android:textSize="15sp"
+                android:text="Love"
+                app:icon="@drawable/love"
+                app:iconSize="75dp"
+                app:iconGravity="start"
+                app:iconTint="@null"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNeutral"
+                android:layout_width="0dp"
+                android:layout_height="142dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:background="@drawable/emoji_button_bg"
+                android:textSize="15sp"
+                android:text="Neutral"
+                app:icon="@drawable/neutral"
+                app:iconPadding="0dp"
+                app:iconSize="75dp"
+                app:iconGravity="start"
+                app:iconTint="@null"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnWorried"
+                android:layout_width="0dp"
+                android:layout_height="142dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:background="@drawable/emoji_button_bg"
+                android:textSize="15sp"
+                android:text="Anxious"
+                app:iconPadding="0dp"
+                app:icon="@drawable/anxious"
+                app:iconSize="75dp"
+                app:iconGravity="start"
+                app:iconTint="@null"/>
+        </GridLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

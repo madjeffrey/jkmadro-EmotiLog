@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">emotiLog</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Summary</string>
+    <string name="title_notifications">Logs</string>
+    <string name="feeling_prompt">How are you feeling?</string>
+    <string name="emotion_log">Emotion Log</string>
+    <string name="no_emotions_logged_yet">No emotions logged yet</string>
+    <string name="clear_logs">Clear Logs</string>
+</resources>
